@@ -4,11 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file if needed -->
     <style>
-        /* Add your CSS styles here */
-        .view-btn {
-            background-color: #007bff; /* Blue background */
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Sidebar Styles */
+        .sidebar-info_more {
+            width: 250px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            height: 100%;
+        }
+
+        .separator {
+            margin: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .contacts-list, .social-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-item, .social-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .icon-box {
+            margin-right: 10px;
+        }
+
+        .contact-title {
+            font-weight: bold;
+        }
+
+        .contact-link, .social-link {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .social-link:hover {
+            color: #0056b3;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 270px; /* Space for sidebar */
+            padding: 20px;
+        }
+
+        .navbar {
+            background: #007bff;
+            padding: 10px;
+        }
+
+        .navbar-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar-item {
+            margin-right: 20px;
+        }
+
+        .navbar-link {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .navbar-link.active {
+            text-decoration: underline;
+        }
+
+        article {
+            display: none; /* Hide all articles by default */
+        }
+
+        article.active {
+            display: block; /* Show active article */
+        }
+
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .download-btn, .view-btn, .linkedin-btn {
+            background-color: brown;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -18,63 +122,64 @@
             border-radius: 5px;
             display: flex;
             align-items: center;
-            transition: background-color 0.3s ease; /* Transition for background color */
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover, .linkedin-btn:hover {
+            background-color: tan;
+        }
+
+        .view-btn {
+            background-color: #007bff;
         }
 
         .view-btn:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
         }
 
-        .resume-box {
-            background-color: #f9f9f9; /* Light background for the box */
-            border: 1px solid #ddd; /* Light border */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Padding inside the box */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
-            margin: 20px 0; /* Margin around the box */
+        /* Form Styles */
+        .contact-form {
+            margin-top: 20px;
         }
 
-        .resume-box:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
 
-        .button-container {
-            display: flex;
-            flex-direction: column; /* Stack buttons vertically */
-            align-items: center; /* Center buttons horizontally */
-            margin-top: 20px; /* Add some space above the buttons */
-        }
-
-        .download-btn,
-        .linkedin-btn {
-            background-color: brown !important;
+        .form-btn {
+            background-color: #007bff;
             color: white;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
-            margin-top: 10px;
-            font-size: 16px;
             border-radius: 5px;
             display: flex;
             align-items: center;
-            transition: background-color 0.3s ease; /* Transition for background color */
         }
 
-        .download-btn:hover,
-        .linkedin-btn:hover {
-            background-color: tan; /* Change background color on hover */
+        .form-btn:hover {
+            background-color: #0056b3;
         }
 
-        .linkedin-container {
-            display: flex;
-            justify-content: center; /* Center the LinkedIn button */
-            margin-top: 30px; /* Space above the LinkedIn button */
+        /* Map Styles */
+        .mapbox {
+            margin: 20px 0;
         }
 
-        .linkedin-btn ion-icon {
-            margin-right: 5px; /* Space between icon and text */
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .sidebar-info_more {
+                width: 100%;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -383,9 +488,6 @@
             </section>
         </article>
     </div>
-
-    <!-- Custom JS Link -->
-    <script src="script.js"></script>
 
     <!-- Ionicon Link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
