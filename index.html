@@ -221,42 +221,62 @@
       </section>
     </article>
 
-    <!-- Resume Section -->
-    <article class="resume" data-page="resume">
-      <header>
+   <!-- Resume Section -->
+<article class="resume" data-page="resume">
+    <header>
         <h2 class="h2 article-title">Resume</h2>
-      </header>
+    </header>
 
-      <!-- Resume Box -->
-      <section class="resume-box">
+    <!-- Resume Box -->
+    <section class="resume-box">
         <div class="title-wrapper">
-          <div class="icon-box">
-            <ion-icon name="document-outline"></ion-icon>
-          </div>
-          <h3 class="h3">Download/View Resume</h3>
+            <div class="icon-box">
+                <ion-icon name="document-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Download/View Resume</h3>
         </div>
 
         <!-- Button to Download the PDF -->
         <div class="button-container">
-          <a href="Resume.pdf" download="Resume.pdf">
-            <button class="download-btn">Download Resume</button>
-          </a>
+            <a href="Resume.pdf" download="Resume.pdf">
+                <button class="download-btn">Download Resume</button>
+            </a>
+            <a href="Resume.pdf" target="_blank">
+                <button class="view-btn">View Resume</button>
+            </a>
         </div>
-      </section>
+    </section>
 
-      <!-- LinkedIn Button -->
-      <div class="linkedin-container">
-        <a
-          href="https://www.linkedin.com/in/satya-kottu-8074645996k/"
-          target="_blank"
-        >
-          <button class="linkedin-btn">
-            <ion-icon name="logo-linkedin"></ion-icon>
-            LinkedIn Profile
-          </button>
+    <!-- LinkedIn Button -->
+    <div class="linkedin-container">
+        <a href="https://www.linkedin.com/in/satya-kottu-8074645996k/" target="_blank">
+            <button class="linkedin-btn">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                LinkedIn Profile
+            </button>
         </a>
-      </div>
-    </article>
+    </div>
+</article>
+
+<style>
+    .view-btn {
+        background-color: #007bff; /* Blue background */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s ease; /* Transition for background color */
+    }
+
+    .view-btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+</style>
 
     <!-- Projects Section -->
     <article class="projects" data-page="projects">
