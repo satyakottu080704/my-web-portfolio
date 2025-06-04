@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -100,6 +101,7 @@
 
       <!-- Main Content -->
       <div class="main-content">
+        <!-- Navbar -->
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item"><button class="navbar-link active" onclick="showSection('about')">About</button></li>
@@ -131,7 +133,7 @@
             </div>
 
             <a href="mailto:satyakottu99@gmail.com?subject=Resume Inquiry from Portfolio">
-              <iframe src="Resume.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 8px;" title="Click to send resume inquiry"></iframe>
+              <iframe src="Resume.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 8px; cursor: pointer;" title="Click to send email about resume"></iframe>
             </a>
 
             <div class="button-container">
@@ -170,6 +172,7 @@
                   <p class="project-category">Web Development</p>
                 </a>
               </li>
+              <!-- Add more projects -->
             </ul>
           </section>
         </article>
@@ -185,9 +188,12 @@
 
           <section class="contact-form">
             <h3 class="h3 form-title">Contact Form</h3>
-            <form action="https://formsubmit.co/satyakottu99@gmail.com" method="POST" class="form">
+            <form class="form" action="https://formsubmit.co/57dc83d532f7395f00ce7bc21e7a0270" method="POST">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
+              <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
               <div class="input-wrapper">
                 <input type="text" name="fullname" class="form-input" placeholder="Full name" required />
                 <input type="email" name="email" class="form-input" placeholder="Email address" required />
@@ -202,6 +208,7 @@
       </div>
     </main>
 
+    <!-- Scripts -->
     <script>
       function showSection(section) {
         document.querySelectorAll("article").forEach((sec) => sec.classList.remove("active"));
@@ -211,9 +218,11 @@
       }
     </script>
 
+    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <!-- Resume Styles -->
     <style>
       .resume-box {
         background: #f9f9f9;
